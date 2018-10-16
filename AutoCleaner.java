@@ -30,18 +30,6 @@ public class AutoCleaner extends Thread
    {
       Thread.sleep(60000); // После выполнения чистки ждем 1 минуту
       cleanAll(); // Вызываем чистку
-   /*
-      while(ClearWorld.enabled) 
-      {
-         cleanAll(); // Вызываем чистку
-         try 
-         {
-            Thread.sleep(3600000); // После выполнения чистки ждем 1 час
-         }
-         catch (Exception e) 
-         { 
-         }
-      }*/
    }
    
    /** Проверяет все регионы и чистит при необходимости */
@@ -123,29 +111,6 @@ public class AutoCleaner extends Thread
                                   ". Coord: " + rg.getMaximumPoint().getBlockX() + " " + 
                                                 rg.getMaximumPoint().getBlockY() + " " 
                                                 rg.getMaximumPoint().getBlockZ());
-
-               //WorldEditPlugin worldEdit = WorldGuardPlugin.inst().getWorldEdit();
-               //World world = player.getWorld();
-               //Vector pt1 = rg.getMinimumPoint();
-               //Vector pt2 = rg.getMaximumPoint();
-               //CuboidSelection selection = new CuboidSelection(world, pt1, pt2);
-               //worldEdit.setSelection(player, selection);
-
-               //m.removeRegion(rg.getId());
-               //try 
-               //{
-               //   m.save();
-               //} 
-               //catch (ProtectionDatabaseException e) 
-               //{
-               //   e.printStackTrace();
-               //}
-               
-               //if (ClearWorld.regen) 
-               //{
-               //   LocalWorld lw = new BukkitWorld(w);
-               //   lw.regenerate(new CuboidRegion(lw, rg.getMinimumPoint(), rg.getMaximumPoint()), new EditSession(lw, Integer.MAX_VALUE)); // Регенирируем
-               //}
             }
             Thread.sleep(1); // После выполнения чистки ждем 1 час
          }
