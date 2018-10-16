@@ -11,8 +11,6 @@ import org.bukkit.OfflinePlayer;
 import org.bukkit.World;
 import org.bukkit.entity.Player;
 
-import com.griefcraft.lwc.LWCPlugin;
-import com.griefcraft.model.Protection;
 import com.sk89q.worldedit.EditSession;
 import com.sk89q.worldedit.LocalWorld;
 import com.sk89q.worldedit.bukkit.BukkitWorld;
